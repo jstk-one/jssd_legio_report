@@ -208,8 +208,30 @@
         }
 
         td input {
-            border: 1px solid #999;
-            padding: 8px;
+            border: 2px solid #333 !important;
+            padding: 10px !important;
+            font-size: 16px !important;
+            color: #000 !important;
+            background: #fff !important;
+            width: 100%;
+            box-sizing: border-box;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+
+        td input:focus {
+            border-color: #667eea !important;
+            border-width: 3px !important;
+            outline: none !important;
+        }
+
+        /* iOS Safari 특수 처리 */
+        input[type="text"],
+        input[type="number"],
+        input[type="date"] {
+            -webkit-text-fill-color: #000 !important;
+            opacity: 1 !important;
         }
 
         .activity-category {
@@ -2284,6 +2306,19 @@
                 expense3_desc: document.getElementById('expense3_desc').value,
                 expense3_amount: document.getElementById('expense3_amount').value,
                 activities: collectActivities(),
+                // 카테고리별 합계 추가
+                total_cat1: document.getElementById('total_cat1').textContent,
+                total_cat2: document.getElementById('total_cat2').textContent,
+                total_cat3: document.getElementById('total_cat3').textContent,
+                total_cat4: document.getElementById('total_cat4').textContent,
+                total_cat5: document.getElementById('total_cat5').textContent,
+                total_cat6: document.getElementById('total_cat6').textContent,
+                total_cat7: document.getElementById('total_cat7').textContent,
+                total_cat8: document.getElementById('total_cat8').textContent,
+                total_cat9: document.getElementById('total_cat9').textContent,
+                total_cat10: document.getElementById('total_cat10').textContent,
+                total_cat11: document.getElementById('total_cat11').textContent,
+                total_cat12: document.getElementById('total_cat12').textContent,
                 other_notes: document.getElementById('other_notes').value,
                 confirm_leader: document.getElementById('confirm_leader').value
             };
